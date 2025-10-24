@@ -1,0 +1,70 @@
+# Qt/Qt Creator
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.qmake.cache
+*.creator.user
+*.creator.user.*
+
+# Build artifacts and directories
+build-*/
+build*/
+*/build-*/
+bin/
+build/
+out/
+release/
+debug/
+
+# Object and binary files
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.dll
+*.exe
+*.so
+*.dylib
+*.lib
+*.a
+*.app
+
+# Generated Qt files
+moc_*.cpp
+moc_*.cxx
+ui_*.h
+qrc_*.cpp
+*.moc
+*.qrc
+
+# Make/CMake files
+Makefile
+Makefile.Debug
+Makefile.Release
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# IDE/editor files
+.vscode/
+.idea/
+*.suo
+*.user
+*.user.*
+*.sln
+*.vcxproj*
+*.ncb
+*.sdf
+*.opensdf
+*.DS_Store
+Thumbs.db
+*.swp
+
+# Misc
+~$*
+*.lnk
+
+# OneDrive temp files
+desktop.ini
