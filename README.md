@@ -1,48 +1,57 @@
-<<<<<<< HEAD
-# QT-Snake-Game
-=======
 # SnakeGame
 
 A small Qt-based Snake game (qmake project).
 
+# SnakeGame
+
+A compact Snake game implemented with Qt (Widgets). This repository uses qmake and is intended to be built with Qt Creator or Qt command-line tools on Windows.
+
+## Quick summary
+
+- Language: C++
+- Toolkit: Qt (Widgets)
+- Build system: qmake (.pro)
+
 ## Requirements
 
-- Qt 5 or Qt 6 (Qt Widgets)
-- A compatible compiler (MinGW or MSVC)
-- Qt Creator (recommended) or the Qt command-line tools
+- Qt 5 or Qt 6 (Qt Widgets module)
+- A supported compiler: MinGW (recommended for Qt distributions bundled with MinGW) or MSVC
+- Qt Creator (recommended) or the Qt command-line tools available with your Qt installation
 
-## Build (Qt Creator)
+## Build & run (recommended — Qt Creator)
 
 1. Open `SnakeGame.pro` in Qt Creator.
-2. Configure a kit (MinGW or MSVC) and build/run from the IDE.
+2. Select/configure a kit (MinGW or MSVC) and run `Build` → `Run` from the IDE.
 
-## Build (command line, MinGW)
+## Build & run (command line)
 
-Open the Qt command prompt for your Qt installation, then run:
+Open the Qt command prompt shipped with your Qt installation (this sets PATH and other env vars). Then from the project root run:
+
+For MinGW:
 
 ```powershell
 qmake
 mingw32-make
+.
 ```
 
-For MSVC (Visual Studio), you can use:
+For MSVC (Visual Studio Developer Command Prompt):
 
 ```powershell
 qmake -spec win32-msvc
 nmake
+.
 ```
 
-The built executable will be in your build folder (e.g. a `release` or `debug` subfolder). Run the produced `.exe` to start the game.
+The produced `.exe` will typically be inside a `release` or `debug` folder under the project root or the build directory configured by your kit.
 
-## Project layout
+## Project structure
 
-- `src/` — source files: `main.cpp`, `mainwindow.cpp/.h`, `Resources.qrc`, and the `.pro` file.
+- `src/` — application source files (e.g. `main.cpp`, `mainwindow.cpp`, `mainwindow.h`, `Resources.qrc`)
+- `SnakeGame.pro` — qmake project file
 
-## License
+## Troubleshooting
 
-Add your preferred license here.
-
-## Notes
-
-- This repository uses qmake (`.pro`) as the build system. If you prefer CMake, you can port the project to a `CMakeLists.txt`.
->>>>>>> a325fee (Initial commit)
+- If qmake is not found, open the "Qt Command Prompt" for your Qt install, or ensure `qmake.exe` is on PATH.
+- If you see missing Qt headers or libs, check that your selected kit matches the Qt version used to build the project.
+- For MSVC builds ensure you use the corresponding Visual Studio Developer Command Prompt so the correct compiler and tools are on PATH.
